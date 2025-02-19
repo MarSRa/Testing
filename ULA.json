@@ -1,0 +1,797 @@
+{
+	"info": {
+		"_postman_id": "b94051fc-1bfb-4c72-9970-a5083f23137e",
+		"name": "ULA_and_URA_for_ReportingLake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ULA+ specified APIs",
+			"item": [
+				{
+					"name": "Test Connection",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "access_token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/testConnection",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"testConnection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/account/2010207",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"account",
+								"2010207"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Accounts",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/account?currentPage=1&pageSize=10",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"account"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Entitlement",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/entitlement/SAML_kibana",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"entitlement",
+								"SAML_kibana"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Entitlements",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/entitlement?currentPage=1&pageSize=10",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"entitlement"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "URA specified APIs",
+			"item": [
+				{
+					"name": "Add Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountName\": \"2010220\",\r\n    \"accountOwner\": \"2010220\",\r\n    \"accountType\": \"User\",\r\n    \"accountStatus\": \"Active\",\r\n    \"accountDescription\": \"\",\r\n    \"isPrivileged\": \"Yes\",\r\n    \"accessRoles\": [\r\n        {\r\n            \"roleName\": \"business_rules\"\r\n        },\r\n        {\r\n            \"roleName\": \"technical_rules\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/account",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isPrivileged\": \"Yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/account/update/1010019",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"account",
+								"update",
+								"1010019"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/account/delete/1010017",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"account",
+								"delete",
+								"1010017"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Entitlement",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "oidc-client",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountName\": \"1010011\",\r\n    \"accountOwner\": \"1010011\",\r\n    \"accessRoles\" : [\r\n        {\r\n            \"roleName\": \"business_rules\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/icsres/api/entitlement/removeEntitlement",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"icsres",
+								"api",
+								"entitlement",
+								"removeEntitlement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"access_token\", access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "https://uklvadhdp009a.pi.dev.net:10000/icsauth/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "oidc-client",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "access_token",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJmNmRiYWM4My03ZjQyLTQ4YTItOTgyZi0zNGNhMzg4YzU5OTAiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJyZWNvbiIsImF1ZCI6InJlY29uIiwibmJmIjoxNzMwMTgwMTYzLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjE5MDAwIiwiZXhwIjoxNzMwMTgwNDYzLCJpYXQiOjE3MzAxODAxNjMsImp0aSI6ImU4ODg5MzBhLTVmM2YtNDA4MC04ODZiLWI0MjYwZWNmN2ZiNyJ9.FK1Cmobohwi2Mp1jl_R4fqWcKa8-2mwLlRDSd7iP0JjtKqAljrzMuofy731XusgCmSwkluzwtZU8Lijw2Y95maIjv9xrpZoQhhDY607psWWnM-_AaT6wtWLak955CKGZijRnw7u6lOSs_Sh9OKHMPSUd8ekdlSf1T4YIL5yvPQdb3PbkVSKK4IWzmubCbPHdGMVBIFvjhA0nglQQr4wYrh5bqaQMqqyK3zfKc8zEN-oQ2hY6YxLQFXA1pw5MkX3b01PvTo5Dj590T4N-z8HWLHHPH9Q9T2dsnvJipSy9HYBN1OdA33X3jo_rWjf6WU-40kJ-UaUOaS8YebisIOpODA",
+							"type": "default",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}:{{port}}/icsauth/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"icsauth",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "uklvadhdp009a.pi.dev.net",
+			"type": "default"
+		},
+		{
+			"key": "port",
+			"value": "10000"
+		},
+		{
+			"key": "host",
+			"value": "localhost",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "authport",
+			"value": "15000",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "port",
+			"value": "20000",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "access_token",
+			"value": "{{access_token}}",
+			"disabled": true
+		}
+	]
+}
